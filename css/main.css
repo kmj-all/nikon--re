@@ -670,6 +670,485 @@ a{
 }
 
 
+/* lut */
+
+.lut{
+  background-color: #111;
+  padding-bottom: 16rem;
+}
+
+.lut_inner{
+  max-width: 1600px;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+}
+
+.lut_inner .lut_text{
+  color: #A7A9AC;
+}
+
+.lut_inner .lut_text .lut_new{
+  font-family: "Red Hat Display", serif;
+  letter-spacing: 0.8rem;
+  font-weight: 600;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.lut_inner .lut_text .lut_title1,
+.lut_inner .lut_text .lut_title2
+{
+  font-family: 'Pretendard-Bold';
+  color: #fff;
+  font-size: 8rem;
+  line-height: 1.3;
+}
+
+.lut_inner .lut_text .lut_title2{
+  background: rgb(255,221,0);
+  background: linear-gradient(90deg, rgba(255,221,0,1) 0%, rgba(255,150,72,1) 31%, rgba(255,90,133,1) 63%, rgba(49,105,190,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 30%;
+}
+
+.lut_inner .lut_text .lut_title3{
+  font-family: 'Pretendard-SemiBold';
+  font-size: 1.7rem;
+  letter-spacing: 0.8rem;
+  margin-top: 2.4rem;
+  margin-bottom: 4.8rem;
+}
+
+.lut_inner video{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* lut 스크립트 적용 이미지 부분 */
+
+.lut_inner .lut_wrap{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4.8rem;
+  gap: 2rem;
+}
+
+.lut_inner .lut_wrap .lut_item{
+  width: calc(100% / 4);
+  height: 53.7rem;
+  position: relative;
+}
+
+
+/* 이미지 디스플레이 none or block */
+
+.lut_inner .lut_wrap .lut_item .lut_img img:first-child{
+  display: block;
+}
+
+.lut_inner .lut_wrap .lut_item .lut_img img:nth-child(2){
+  display: none;
+}
+
+.lut_inner .lut_wrap .lut_item.active .lut_img img:first-child{
+  display: none;
+}
+
+.lut_inner .lut_wrap .lut_item.active .lut_img img:nth-child(2){
+  display: block;
+}
+
+.lut_inner .lut_wrap .lut_item{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.lut_inner .lut_wrap .lut_item .lut_img{
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.lut_inner .lut_wrap .lut_item .lut_item_text{
+  position: absolute;
+  top: 6rem;
+  left: 7.3rem;
+  color: #fff;
+  
+}
+
+.lut_inner .lut_wrap .lut_item .lut_item_text{
+  display: none;
+}
+
+.lut_inner .lut_wrap .lut_item.active .lut_item_text{
+  display: block;
+}
+
+
+.lut_inner .lut_wrap .lut_item .lut_item_text .lut_item_title{
+  font-family: "Red Hat Display", serif;
+  letter-spacing: 0.8rem;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+
+.lut_inner .lut_wrap .lut_item .lut_item_text .lut_item_ex{
+  font-family: 'Pretendard-SemiBold';
+  font-size: 1.7rem;
+  opacity: 50%;
+  margin-top: 1.6rem;
+}
+
+.lut_inner .lut_wrap .lut_item .lut_img img{
+  height: 100%;
+}
+
+.lut_inner a{
+  width: 15rem;
+  height: 5rem;
+  display: block;
+  text-align: center;
+  background-color: #FFE600;
+  line-height: 5rem;
+  font-size: 1.6rem;
+  font-family: 'Pretendard-SemiBold';
+  margin: 0 auto;
+  margin-top: 4.6rem;
+  text-align: center;
+  border-radius: 3rem;
+}
+
+/* 이벤트 */
+
+.event .title{
+  margin-top: 25.6rem;
+  position: relative;
+  left: -5rem;
+}
+
+.event .inner .event_top{
+  margin-top: -8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.event .inner .event_top .event_top_item:nth-child(1){
+  width: 41.31%;
+}
+
+.event .inner .event_top .event_top_item:nth-child(2){
+  width: 55.56%;
+}
+
+.event .inner .event_top .event_top_item:nth-child(1)>img,
+.event .inner .event_top .event_top_item:nth-child(2)>img{
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.event .inner .event_top .event_top_item .event_top_text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.1rem;
+  align-items: center;
+}
+
+.event .inner .event_top .event_top_item .event_top_text .event_name{
+  font-family: 'Pretendard-Bold';
+  font-size: 4.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.event .inner .event_top .event_top_item .event_top_text .event_sub{
+  font-family: 'Pretendard-Regular';
+  font-size: 1.4rem;
+  color: #A7A9AC;
+}
+
+/* 이벤트 말줄임표 */
+.event .inner .event_top .event_top_item:nth-child(2) .event_top_text .event_name{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* 이벤트 더보기 버튼 */
+
+
+.event .inner .event_top .event_top_item .event_top_text a{
+
+  width: 9.2rem;
+  height: 9.2rem;
+  background-color: #d9d9d950;
+  display: block;
+  transition: 0.3s;
+  line-height: 9.2rem;
+}
+
+.event .inner .event_top .event_top_item .event_top_text a img{
+  width: 38.04%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.event .inner .event_top .event_top_item .event_top_text a:hover{
+  background-color: #FFDD00;
+  border-radius: 50%;
+}
+
+/* 이벤트 리스트 */
+
+.event .inner .event_list{
+  margin-top: 6.8rem;
+  margin-bottom: 9.3rem;
+}
+
+
+.event .inner .event_list li{
+  border-top: 1px solid #111;
+}
+
+.event .inner .event_list li:last-child{
+  border-bottom: 1px solid #111;
+}
+
+.event .inner .event_list > li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #111;
+  font-family: 'Pretendard-Bold';
+  font-size: 4.9rem;
+  padding: 2.6rem 0;
+  transition: 0.5s;
+  padding-left: 5.6rem;
+  padding-right: 3rem;
+}
+
+.event .inner .event_list > li:hover{
+  background-color: #111;
+  color: #fff;
+}
+
+.event .inner .event_list > li:hover svg path{
+  fill: #fff;
+}
+
+
+.nikon_school{
+  width: 100%;
+  height: 38.1rem;
+  position: relative;
+}
+
+.nikon_school img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.5);
+}
+
+.nikon_school .nikon_school_text{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.nikon_school .nikon_school_text .school_sub_title{
+  color: #ffffff70;
+  font-family: 'Pretendard-Medium';
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+
+.nikon_school .nikon_school_text .school_title{
+  font-family: "Red Hat Display", serif;
+  font-size: 8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+
+.nikon_school .nikon_school_text a{
+  display: inline-block;
+  background-color: #FFE600;
+  width: 15rem;
+  height: 5rem;
+  line-height: 5rem;
+  color: #111;
+  border-radius: 3rem;
+  text-align: center;
+  font-family: 'Pretendard-SemiBold';
+}
+
+
+/* footer */
+
+.footer{
+  width: 100%;
+  background-color: #F1F2F2;
+  color: #A7A9AC;
+  padding: 8rem 0;
+}
+
+.footer .inner .footer_top{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 푸터 메뉴 */
+
+.footer .inner .footer_top .footer_menu_list{
+  display: flex;
+
+}
+
+.footer .inner .footer_top .footer_menu_list > li a{
+  text-align: start;
+  color: #333;
+  font-size: 1.8rem;
+  font-family: 'Pretendard-Bold';
+  padding-right: 7.2rem;
+  margin-bottom: 3.2rem;
+  display: block;
+}
+
+.footer .inner .footer_top .footer_menu_list > li > ul li{
+  width: 100%;
+  font-family: 'Pretendard-Medium';
+  font-size: 1.8rem;
+  margin-bottom: 2.1rem;
+}
+
+
+
+/* sns */
+
+.footer .inner .footer_top .sns{
+  display: flex;
+  text-align: center;
+  gap: 5.1rem;
+
+}
+
+/* footer bottom */
+
+.footer_bottom{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_bottom .footer_bottom_l .footer_logo {
+  width: 27.9rem;
+  height: 2.8rem;
+  display: block;
+  margin-top: 10rem;
+}
+
+
+.footer_bottom .footer_bottom_l .footer_logo img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.footer_bottom .footer_bottom_l .footer_text{
+  color: #494949;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1.6rem;
+  margin-bottom: 2rem;
+  
+}
+
+.footer_bottom .footer_bottom_l .footer_text p::after{
+  content: '';
+  width: 1px;
+  height: 7px;
+  display: inline-block;
+  background-color: #999999;
+  margin: 0 1.2rem;
+}
+
+.footer_bottom .footer_bottom_l .footer_text p:last-child:after{
+  content: '';
+  display: none;
+}
+
+.footer_bottom .footer_bottom_l .footer_text_2{
+  font-family: 'Pretendard-Light';
+  color: #666;
+  line-height: 1.2;
+  font-size: 1.1rem;
+}
+
+.footer_bottom .footer_bottom_l .footer_text_2 p:last-child{
+  margin-top: 2rem;
+}
+
+.footer_bottom  .footer_bottom_r{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.footer_bottom  .footer_bottom_r select{
+  width: 19rem;
+  height: 4rem;
+  outline: none;
+  border: 1px solid #eee;
+  padding: 0 1rem ;
+  background-color: #fff;
+  font-family: 'Pretendard-Regular';
+  -webkit-appearance: none;  /* 크롬 화살표 없애기 */
+    -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+    appearance: none;  /* 화살표 없애기 */
+}
+
+.footer_bottom  .footer_bottom_r select option{
+  background-color: #fff;
+  color: #333;
+}
+
+.footer_bottom  .footer_bottom_r .family_site{
+  background: url('../img/footer/CaretDown.svg')no-repeat 95% 50%;
+}
+
+.footer_bottom  .footer_bottom_r img{
+  width: 18.9rem;
+  height: 6rem;
+  object-fit: cover;
+  display: block;
+  margin-top: 1rem;
+  
+}
+
+
 
 
 
