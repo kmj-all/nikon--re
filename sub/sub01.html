@@ -223,7 +223,32 @@
 
                 
 
-                
+                //이달의 강의 탭메뉴
+
+                let classMenu = document.querySelectorAll('.class_menu li');
+                let classItemwrap = document.querySelectorAll('.class_item_wrap');
+
+                for(let i = 0; i < classMenu.length; i++){
+                    classMenu[i].addEventListener('click', () => {
+
+                        classMenu.forEach(menuList =>{
+                            menuList.classList.remove('active')
+                        });
+
+                        classMenu[i].classList.add('active')
+
+                        classItemwrap.forEach(classItemwrap => {
+                            classItemwrap.classList.remove('active')
+
+                        });
+
+                        classItemwrap[i].classList.add('active')
+
+                    });
+
+
+
+                };
 
 
 
@@ -617,37 +642,37 @@
                     <li>오프라인</li>
                 </ul><!-- class_menu end -->
     
-                <div class="class_item_wrap active">
+                <div class="online_wrap class_item_wrap active">
                     <div class="online item">
-                        <p class="item text">NOV 5</p>
+                        <p class="item_text">NOV 5</p>
                         <img src="../img/subimg/이달의강의/online01.jpg" alt="불꽃축제 촬영 팁">
                         <a href="#">online</a>
                     </div><!-- online_item end -->
 
                     <div class="online item">
-                        <p class="item text">NOV 8</p>
+                        <p class="item_text">NOV 8</p>
                         <img src="../img/subimg/이달의강의/online02.jpg" alt="남극과 북극 이야기">
                         <a href="#">online</a>
                     </div><!-- online_item end -->
 
                     <div class="online item">
-                        <p class="item text">NOV 28</p>
-                        <img src="../img/subimg/이달의강의/online01.jpg" alt="겨울 / 눈 사진 촬영 및 보정">
+                        <p class="item_text on">NOV 28</p>
+                        <img src="../img/subimg/이달의강의/online03.jpg" alt="겨울 / 눈 사진 촬영 및 보정">
                         <a href="#">online</a>
                     </div><!-- online_item end -->
 
                 </div><!-- class_item_wrap end -->
 
 
-                <div class="class_item_wrap">
+                <div class="offline_wrap class_item_wrap">
                     <div class="offline item">
-                        <p class="item text">NOV 9</p>
+                        <p class="item_text">NOV 9</p>
                         <img src="../img/subimg/이달의강의/offline01.jpg" alt="창경궁 촬영">
                         <a href="#">offline</a>
                     </div><!-- online_item end -->
 
                     <div class="offline item">
-                        <p class="item text">NOV 10</p>
+                        <p class="item_text on">NOV 10</p>
                         <img src="../img/subimg/이달의강의/offline02.jpg" alt="루프탑 야경 촬영 노하우">
                         <a href="#">offline</a>
                     </div><!-- online_item end -->

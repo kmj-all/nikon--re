@@ -560,6 +560,141 @@
 /* 이 달의 강의 */
 /* 스크립트 및 css 추가 필요 */
 
+/* 타이틀 및 메뉴 폰트 css 수정 */
+
+.month_class .class_title{
+  font-family: 'Pretendard-Bold';
+  font-size: 8rem;
+  margin-top: 27.3rem;
+  margin-bottom: 8.5rem;
+  text-align: center;
+
+}
+
+.month_class .class_menu {
+  font-family: 'Pretendard-Medium';
+  display: flex;
+  justify-content: center;
+  gap: 20.2rem;
+  font-size: 3.2rem;
+}
+
+.month_class .class_menu li{
+  opacity: 50%;
+}
+
+.month_class .class_menu li.active{
+  opacity: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 8.8rem;
+}
+
+.month_class .class_item_wrap {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  display: none;
+}
+
+.month_class .class_item_wrap.active{
+  display: flex;
+}
+
+/* 아이템 크기 */
+
+.month_class .class_item_wrap .item{
+  width: 18.75%;
+  position: relative;
+}
+
+
+.month_class .class_item_wrap .item img{
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 아이템 텍스트 */
+
+.month_class .class_item_wrap .item  .item_text{
+  font-family: "Red Hat Display", serif;
+  font-weight: 900;
+  color: #111;
+  width: 30rem;
+  height: 13.3rem;
+  font-size: 8rem;
+  text-align: center;
+  line-height: 13.3rem;
+}
+
+.month_class .class_item_wrap .item  .item_text.on{
+  font-size: 7rem;
+}
+
+/* 백그라운드 색상 */
+
+.month_class .online_wrap .item:first-child  .item_text{
+  background-color: #35D796;
+}
+
+.month_class .online_wrap .item:nth-child(2)  .item_text{
+  background-color: #FFDD00;
+}
+
+.month_class .online_wrap .item:nth-child(3)  .item_text{
+  background-color: #D735A6;
+}
+
+.month_class .offline_wrap .item:first-child  .item_text{
+  background-color: #357BD7;
+}
+
+.month_class .offline_wrap .item:nth-child(2)  .item_text{
+  background-color: #7448F8;
+}
+
+/* 온라인 오프라인 표시버튼 */
+
+
+.month_class .class_item_wrap .item a{
+  width: 6.2rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  font-family: "Red Hat Display", serif;
+  font-weight: 900;
+  border-radius: 8rem;
+  display: block;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0.9rem;
+  letter-spacing: 0.05rem;
+}
+
+.month_class .online_wrap .item a {
+  background: rgb(53,123,215);
+  background: linear-gradient(90deg, rgba(53,123,215,1) 0%, rgba(49,105,190,1) 100%);
+}
+
+.month_class .offline_wrap .item a {
+  background: rgb(236,150,210);
+  background: linear-gradient(180deg, rgba(236,150,210,1) 0%, rgba(255,16,183,1) 100%);
+
+}
+
+/* 이 달의 강의 더보기 호버  */
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */
