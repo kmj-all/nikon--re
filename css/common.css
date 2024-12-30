@@ -105,11 +105,13 @@ body{
 
 body::-webkit-scrollbar{
     background-color: #eee;
+    width: 8px;
 }
 
 body::-webkit-scrollbar-thumb{
     background-color: #6d6d6d7a;
     border-radius: 15px;
+
 }
 
 .title{
