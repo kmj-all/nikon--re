@@ -211,17 +211,41 @@
                 $(this).addClass('active');
 
 
-
-
-
                 //  $(this).find('p').show();
                 //  $(this).siblings().find('p').hide();
 
+            });
+
+            //퀵메뉴 탑버튼 맨 위로 올라가기
+
+            let quickMenu = $('.quick_menu');
+            let topBtn = $('.quick_menu .topbtn');
+
+            topBtn.click(function(){
+
+                $('html, body').animate({
+
+                    scrollTop : 0
+                },2000);
 
 
             });
 
+            //퀵버튼 z6 섹션 부터 보이게하며
+            //메인비주얼 영역에서는 fadeout
 
+            let quickmenuShow = $('.camera_background').offset().top;
+
+            $(window).scroll(function(){
+
+                let scrollBar = $(window).scrollTop();
+
+                if(quickmenuShow >= scrollBar){
+                    quickMenu.fadeOut(800);
+                }else if(scrollBar >= quickmenuShow){
+                    quickMenu.fadeIn(800);
+                }
+            });
 
 
 
@@ -504,12 +528,12 @@
 
         </main><!--main_visual end -->
 
-        <section class="best">
+        <section class="best pc">
             <h2 class="title">best</h2>
             <div class="inner">
-                <div class="best_wrap">
+                <div class="best_wrap pc">
 
-                    <div class="best_item">
+                    <div class="best_item pc">
                         <img src="img/베스트아이템/bestz8.png" alt="z8">
                         <div class="item_text">
                             <p class="item_name">Z8</p>
@@ -521,7 +545,7 @@
                         </div><!-- item_text end -->
                     </div><!-- best_item end -->
 
-                    <div class="best_item">
+                    <div class="best_item pc">
                         <img src="img/베스트아이템/bestzfc.png" alt="zfc">
                         <div class="item_text">
                             <p class="item_name">Zfc</p>
@@ -533,7 +557,7 @@
                         </div><!-- item_text end -->
                     </div><!-- best_item end -->
 
-                    <div class="best_item">
+                    <div class="best_item pc">
                         <img src="img/베스트아이템/nic.png" alt="nic">
                         <div class="item_text">
                             <p class="item_subtitle">연결할수록 커지는 즐거움</p>
@@ -547,9 +571,9 @@
             </div><!-- inner end -->
         </section><!-- best_item end -->
 
-        <section class="best_more">
-            <div class="more_wrap">
-                <div class="more_item">
+        <section class="best_more pc">
+            <div class="more_wrap pc">
+                <div class="more_item pc">
                     <img src="img/베스트아이템/bestmore.png" alt="더 다양한 베스트제품">
                     <div class="more_text">
                         <div class="more_top">
@@ -560,7 +584,7 @@
                     </div><!-- more_text end -->
                 </div><!-- more_item end -->
 
-                <div class="more_item">
+                <div class="more_item pc">
                     <img src="img/베스트아이템/COOLSHOT.png" alt="COOLSHOT PROII STABILIZED">
                     <div class="more_text">
                         <p class="more_sub">최고의 플레이를 위한 최고의 선택</p>
@@ -568,7 +592,7 @@
                     </div><!-- more_text end -->
                 </div><!-- more_item end -->
 
-                <div class="more_item">
+                <div class="more_item pc">
                     <img src="img/베스트아이템/ARCRESTII.png" alt="ARCREST II">
                     <div class="more_text">
                         <p class="more_sub">렌즈와 묘사력을 극한까지 이끌어내다</p>
@@ -577,6 +601,19 @@
                 </div><!-- more_item end -->
 
             </div><!-- more_wrap end -->
+        </section><!-- best_more end -->
+
+        <section class="bestzip mobile">
+            <div class="inner">
+                <div class="bestzip_wrap">
+                   <div class="zip_item">
+                    <p class="zip_title">Z8</p>
+                    <P>Z8 하나로 모든 준비는 끝났다</P>
+                   </div><!-- zip_item end -->
+                    <a href="#"><img src="img/베스트아이템/태블릿용more.svg" alt="베스트제품 more"></a>
+            </div><!-- bestzip_wrap end -->
+            </div><!-- inner end -->
+
         </section><!-- best_more end -->
 
         <div class="camera_background">
@@ -904,8 +941,29 @@
                     </div><!-- footer_bottom_r end -->
                 </div><!-- footer_bottom end -->
             </div><!-- inner end -->
-
         </footer><!-- footer end -->
+
+        <div class="quick_menu">
+            <div class="quick_item">
+                <img src="img/퀵메뉴/image.svg" alt="이미지/퀵메뉴">
+                <p>NIC</p>
+            </div><!--quick_item end -->
+
+            <div class="quick_item">
+                <img src="img/퀵메뉴/판매점.svg" alt="판매점/퀵메뉴">
+                <p>판매점</p>
+            </div><!--quick_item end -->
+
+            <div class="quick_item">
+                <img src="img/퀵메뉴/정품등록.svg" alt="정품등록/퀵메뉴">
+                <p>정품등록</p>
+            </div><!--quick_item end -->
+
+            <div class="quick_item topbtn">
+                <img src="img/퀵메뉴/top.svg" alt="맨 위로/퀵메뉴">
+            </div><!--quick_item end -->
+            
+        </div><!--quick_menu end -->
 
     </div> <!-- wrap end -->
 </body>

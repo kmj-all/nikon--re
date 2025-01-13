@@ -448,6 +448,10 @@ a{
   font-size: 2.7rem;
 }
 
+.bestzip.mobile{
+  display: none;
+}
+
 
 
 /* z6 sticky 부분 */
@@ -552,6 +556,15 @@ a{
   display: block;
   border-radius: 5rem;
   /* filter: brightness(0.88); */
+}
+
+.new_camera .Z6_more .Z6_more_wrap .Z6_more_item:nth-child(2){
+  overflow: hidden;
+  border-radius: 5rem;
+}
+
+.new_camera .Z6_more .Z6_more_wrap .Z6_more_item:nth-child(2) img{
+  width: 102%;
 }
 
 .new_camera .Z6_more .Z6_more_wrap .Z6_more_item .Z6_item_text{
@@ -737,7 +750,7 @@ a{
 /* 이벤트 */
 
 .event .title{
-  margin-top: 25.6rem;
+  
   position: relative;
   left: -5rem;
 }
@@ -1064,7 +1077,7 @@ a{
 
 
 /* 미디어 쿼리 헤더 가로크기 줄이기 */
-@media screen and (max-width:1530px){
+@media screen and (max-width:1543px){
 
   .header{
     font-size: 1.4rem;
@@ -1278,6 +1291,89 @@ a{
 
 }
 
+/* 미디어쿼리 베스트제품 수정 */
+
+@media screen and (max-width:1440px){
+
+  .item_name {
+    font-family: "Red Hat Display", serif;
+    font-weight: 900;
+    font-size: 5.6rem;
+}
+
+
+}
+
+
+/* 미디어쿼리 베스트제품 태블릿 형태로 변경 */
+
+
+@media screen and (max-width:1300px){
+
+
+  /* pc버전 display 설정 */
+  .best > .pc {
+    display: none;
+
+  }
+
+  .best_more .pc{
+    display: none;
+    margin-top: 0;
+  }
+
+  .best .inner .best_wrap{
+    display: none;
+  }
+
+  .best_more {
+    margin-top: 0;
+  }
+
+  /* .bestzip 부분 */
+
+  .bestzip.mobile{
+    display: block;
+    width: 100%;
+    margin-top: -12rem;
+
+  }
+
+  .bestzip.mobile .bestzip_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+    row-gap: 1.6rem;
+  }
+
+  .bestzip.mobile .bestzip_wrap a{
+    width: 45.2rem;
+    height: 45.2rem;
+    display: block;
+  }
+
+  .bestzip.mobile .bestzip_wrap a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 3rem;
+  }
+
+  .bestzip.mobile .bestzip_wrap a img:last-child{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+
+}
+
+
+@media screen and (max-width:968px){
+
+  
+}
 
 
 
