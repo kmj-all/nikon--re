@@ -114,6 +114,12 @@ body::-webkit-scrollbar-thumb{
 
 }
 
+
+::selection{
+    background-color: #FFE600;
+    color: #111111;
+  }
+
 .title{
     font-family: "Red Hat Display", serif;
     font-weight: 900;
@@ -179,6 +185,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 15px;
     font-family: 'Pretendard-Medium';
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 50;
 }
 
 .quick_menu.change{
@@ -192,3 +199,5 @@ body::-webkit-scrollbar-thumb{
 .quick_menu > .quick_item p{
     margin-top: 0.6rem;
 }
+
+/* 반응형 헤더 추가 수정 */
