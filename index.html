@@ -125,9 +125,15 @@
             });
 
 
-
-
             //모바일 nav //배경 흐리게
+
+            //801px 이상에서는 화면의 일부분만 차지
+            //800px 부터는 화면의 100%
+
+
+            var mql5 = window.matchMedia("screen and (min-width: 801px)");
+            if(mql5.matches){
+               
 
             menuBtn.click(function () {
 
@@ -141,6 +147,23 @@
                 }, 1000);
 
             });
+
+        }
+
+        var mql6 = window.matchMedia("screen and (max-width: 800px)");
+            if(mql6.matches){
+               
+                menuBtn.click(function () {
+
+                closeBtn.fadeIn(300);
+                mobileNav.animate({
+
+                    'left': '0'
+                }, 1000);
+                });
+
+        }
+
 
             //모바일 nav 닫기
 
@@ -231,23 +254,6 @@
 
             });
 
-            //퀵버튼 z6 섹션 부터 보이게하며
-            //메인비주얼 영역에서는 fadeout
-
-            let quickmenuShow = $('.camera_background').offset().top;
-
-            $(window).scroll(function(){
-
-                let scrollBar = $(window).scrollTop();
-
-                if(quickmenuShow >= scrollBar){
-                    quickMenu.fadeOut(800);
-                }else if(scrollBar >= quickmenuShow){
-                    quickMenu.fadeOut(800); // 푸터 수정 후 fadein으로 수정
-                }
-            });
-
-
 
             //aos
 
@@ -255,18 +261,43 @@
 
             //z6 aos 1100px 미만의 창크기에서 효과 제거
 
-            var mql = window.matchMedia("screen and (max-width: 1100px)");
-            if(mql.matches){
+            var mql1 = window.matchMedia("screen and (max-width: 1100px)");
+            if(mql1.matches){
                 $('.Z6_more > div').attr('data-aos', '');
                 $('.Z6_more > p').attr('data-aos', '');
 
                 };
 
+
+            //퀵메뉴 851px
+
+            //퀵버튼 z6 섹션 부터 보이게하며
+            //메인비주얼 영역에서는 fadeout
+
+            var mql4 = window.matchMedia("screen and (min-width: 851px)");
+            if(mql4.matches){
+               
+                let quickmenuShow = $('.camera_background').offset().top;
+
+                $(window).scroll(function(){
+
+                    let scrollBar = $(window).scrollTop();
+
+                    if(quickmenuShow >= scrollBar){
+                        quickMenu.fadeOut(800);
+                    }else if(scrollBar >= quickmenuShow){
+                        quickMenu.fadeIn(800); // 푸터 수정 후 fadein으로 수정
+                    }
+                });
+
+                };
+
+
             
             //푸터 아코디언 메뉴바
 
-            var mql = window.matchMedia("screen and (max-width: 740px)");
-            if(mql.matches){
+            var mql2 = window.matchMedia("screen and (max-width: 740px)");
+            if(mql2.matches){
 
                 let footerNav = $('.footer .inner .footer_top .footer_menu_list > li p');
 
@@ -281,18 +312,15 @@
 
             //모바일 환경에서 슬라이드 구현 ( 650px ) 
 
-            var mql = window.matchMedia("screen and (max-width: 650px)");
+            var mql3 = window.matchMedia("screen and (max-width: 650px)");
 
-            if (mql.matches) {
+            if (mql3.matches) {
 
             var swiper = new Swiper(".lutSwiper", {
             slidesPerView: 1.2,
             spaceBetween: 16,
             });
             };
-
-        
-            
 
 
         });
@@ -881,13 +909,13 @@
                         2024-2025">
                         <div class="event_top_text">
                             <div class="top_text_group">
-                                <p class="event_name">Nikon Film & Photo Contest<br>
-                                    2024-2025</p>
+                                <p class="event_name">Nikon Film & Photo Contest<br>2024-2025</p>
                                 <p class="event_sub">사진과 영상을 사랑하는 전세계인들의 축제</p>
                             </div><!-- top_text_group end -->
                             <a href="#"><img src="img/이벤트/CaretRight.svg" alt="이벤트 더보기"></a>
                         </div><!-- event_top_text end -->
                     </div><!-- event_top_item end -->
+
                 </div><!-- event_top end -->
 
                 <ul class="event_list">

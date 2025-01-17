@@ -557,7 +557,7 @@ a{
   object-fit: cover;
   display: block;
   border-radius: 5rem;
-  /* filter: brightness(0.88); */
+  /* filter: brightness(0.78); */
 }
 
 .new_camera .Z6_more .Z6_more_wrap .Z6_more_item:nth-child(2){
@@ -575,13 +575,15 @@ a{
   /* top: 17.6rem;
   left: 7.3rem; */
   width: 100%;
+  height: 100%;
   font-size: 2rem;
   line-height: 1.3;
   font-family: 'Pretendard-Medium';
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.493) 0%, rgba(255,255,255,0) 100%);
-  bottom: 0;
+  top: 0;
   left: 0;
+  padding-top: 17.6rem;
   padding-left: 7.3rem;
   padding-bottom: 3.9rem;
   border-radius: 5rem;
@@ -793,6 +795,10 @@ a{
   justify-content: space-between;
   margin-top: 3.1rem;
   align-items: center;
+}
+
+.event .inner .event_top .event_top_item .event_top_text .top_text_group{
+  width: calc(100% - 9.2rem);
 }
 
 .event .inner .event_top .event_top_item .event_top_text .event_name{
@@ -1138,6 +1144,7 @@ a{
     top: 1.4rem;
     right: 52%;
     z-index: 102;
+    cursor: pointer;
   }
 
 
@@ -1315,6 +1322,25 @@ a{
 
 }
 
+/*메인비주얼 높이변경*/
+
+
+@media screen and (max-width:1370px){
+
+  .main_visual .swiper-slide{
+    height: auto;
+    
+  }
+
+  .main_visual .swiper-slide img{
+    height: 100%;
+  }
+
+  .main_visual .swiper-slide video{
+    height: 100%;
+  }
+}
+
 
 /* 미디어쿼리 베스트제품 태블릿 형태로 변경 */
 
@@ -1407,16 +1433,17 @@ a{
 
   .bestzip.mobile .bestzip_wrap .zip_item .zip_text{
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     color: #fff;
     display: flex;
-    padding-left: 5.9rem;
-    padding-right: 4.3rem;
-    align-items: center;
-    white-space:nowrap 
+    align-items: flex-end;
+    white-space:nowrap;
+    justify-content: center;
+    padding-bottom: 4rem;
+    line-height: 1;
   }
 
   .bestzip.mobile .bestzip_wrap .zip_item .zip_text .zip_title{
@@ -1424,8 +1451,8 @@ a{
     font-weight: 900;
     font-size: 7rem;
     margin-right: 4.9rem;
-    line-height: 1;
-    margin-bottom: 4rem;
+    line-height: 0.8;
+    /* margin-bottom: 4rem; */
   }
 
   .bestzip.mobile .bestzip_wrap .zip_item .zip_text p:nth-child(2){
@@ -1490,6 +1517,9 @@ a{
 
   .event .inner .event_list > li .event_name{
     margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .event .inner .event_list > li .event_name::after{
@@ -1627,54 +1657,17 @@ a{
     margin-bottom: 12vh;
   }
 
-
-}
-
-
+  
 /* 이벤트 폰트 사이즈 */
-@media screen and (max-width:990px){
-
   .event .inner .event_list > li{
     font-size: 5vw;
   }
 
-
 }
 
 
 
-/* z6 부분  텍스트 작게*/
-@media screen and (max-width:650px){
-
-  .new_camera .Z6_more .Z6_more_wrap .Z6_more_item .Z6_item_text{
-    font-size: 1.7rem;
-  }
-
-
-  .lut .mobile  .swiper-wrapper{
-    flex-wrap: nowrap;
-  }
-
-  .lut .mobile  .swiper-wrapper .swiper-slide .lut_item_text  .lut_item_title{
-    font-size: 5.5vw;
-  }
-
-  .lut .mobile  .swiper-wrapper .swiper-slide .lut_item_text .lut_item_ex {
-    font-size: 2vw;
-  }
-
-
-  /* 버튼 폰트 사이즈 */
-
-  .lut_inner a{
-    font-size: 1.4rem;
-  }
- 
-
-}
-
-
-/* 반응형 푸터 */
+/* 반응형 푸터 및 니콘스쿨 타이틀 폰트 크기조절 */
 
 
 @media screen and (max-width:980px){
@@ -1703,6 +1696,51 @@ a{
     justify-content: flex-start;
   }
 
+  .nikon_school .nikon_school_text .school_title{
+    font-size: 8.5vw;
+  }
+
+}
+
+/* 이벤트 버튼 배경 및 호버효과 제거 */
+@media screen and (max-width:860px){
+
+  .event .inner .event_top .event_top_item:nth-child(1), .event .inner .event_top .event_top_item:nth-child(2){
+    width: 100%;
+  }
+
+  .event .inner .event_top .event_top_item .event_top_text a{
+    background-color: transparent;
+  }
+
+  .event .inner .event_top .event_top_item .event_top_text a:hover{
+    background-color: transparent;
+  }
+
+  .event .inner .event_top .event_top_item .event_top_text .event_name{
+    font-size: 5.8vw;
+  }
+
+  .event .inner .event_top .event_top_item .event_top_text{
+    margin-top: 1.6rem;
+  }
+}
+
+/* 반응형 헤더 추가 수정 전체 100vw */
+
+
+@media screen and (max-width:800px){
+
+  .header .inner .nav_tm{
+    width: 100%;
+    padding-top: 10rem;
+  }
+
+  .header .inner .close{
+    right: 3%;
+  
+  }
+    
 }
 
 /* 푸터 아코디언 형식 */
@@ -1727,6 +1765,7 @@ a{
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      padding-right: 0;
   }
 
   .footer .inner .footer_top .footer_menu_list > li p::after{
@@ -1755,11 +1794,133 @@ a{
     order: 1;
     align-items: flex-start;
   }
+
+  .footer_bottom .footer_bottom_l .footer_text{
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+}
+
+/* z6 부분 아이템 랩 가로값 100%*/
+@media screen and (max-width:700px){
+  .new_camera .Z6_more{
+    width: 100%;
+  }
+
+  .new_camera{
+    margin-bottom: 12rem;
+  }
+}
+
+/* z6 부분  텍스트 작게*/
+@media screen and (max-width:650px){
+
+  .new_camera .Z6_more .Z6_more_wrap .Z6_more_item .Z6_item_text{
+    font-size: 1.7rem;
+    padding-left: 6rem;
+  }
+
+  .new_camera .Z6_more .Z6_more_wrap .Z6_more_item .Z6_item_text svg{
+    margin-bottom: 1.5rem;
+  }
+
+  .lut .mobile  .swiper-wrapper{
+    flex-wrap: nowrap;
+  }
+
+  .lut .mobile  .swiper-wrapper .swiper-slide .lut_item_text  .lut_item_title{
+    font-size: 5.5vw;
+  }
+
+  .lut .mobile  .swiper-wrapper .swiper-slide .lut_item_text .lut_item_ex {
+    font-size: 2vw;
+  }
+
+
+  /* 버튼 폰트 사이즈 */
+
+  .lut_inner a{
+    font-size: 1.4rem;
+  }
+ 
+
 }
 
 
-/* 모바일 480px */
+/*z6폰트 크기변경*/
 
+
+@media screen and (max-width:610px){
+
+  .new_camera .Z6 .new{
+    font-size: 3vw;
+  }
+
+  .new_camera .Z6 .new_sub{
+    font-size: 4vw;
+  }
+
+  .new_camera .Z6 .new_title{
+    font-size: 29.5vw;
+  }
+
+}
+
+
+/* 이벤트 사진 none */
+/* 베스트 상품 크기 수정 폰트 크기 수정 */
+@media screen and (max-width:520px){
+
+  .event .inner .event_list > li img{
+    display: none;
+  }
+
+  .event .inner .event_list > li .event_name{
+    margin-top: 0;
+    white-space: nowrap;
+  }
+
+  .event .inner .event_list > li .event_name::after{
+    margin-left: 2rem;
+  }
+
+  .nikon_school .nikon_school_text .school_sub_title{
+    font-size: 1.4rem;
+  }
+
+  .nikon_school .nikon_school_text a{
+    font-size: 1.4rem;
+  }
+
+  .bestzip.mobile .bestzip_wrap .zip_item .zip_text .zip_title{
+    font-size: 6rem;
+    margin-right: 4rem;
+    margin-bottom: 0;
+  }
+
+  .bestzip.mobile .bestzip_wrap .zip_item .zip_text p:nth-child(2){
+    font-size: 1.4rem;
+  }
+}
+
+
+/* 베스트 아이템 중앙정렬 수정 */
+@media screen and (max-width:490px){
+
+  .bestzip.mobile .bestzip_wrap{
+   flex-direction: block;
+   
+  }
+
+  .bestzip.mobile .bestzip_wrap .zip_item{
+    margin-bottom: 1.6rem;  
+  }  
+  
+  .bestzip.mobile .bestzip_wrap .zip_item .zip_text{
+    
+  }
+
+}
 
 
 
