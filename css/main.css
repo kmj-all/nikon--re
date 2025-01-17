@@ -1406,30 +1406,39 @@ a{
   .bestzip.mobile .bestzip_wrap .zip_item{
     cursor: pointer;
     position: relative;
-    width: 45.2rem;
-    height: 45.2rem;
+    border-radius: 3rem;
   }
 
   .bestzip.mobile .bestzip_wrap .zip_item:first-child{
-    background:url('../img/베스트아이템/백그라운드-z8.png') center center / 100% no-repeat ;
+    background:url('../img/베스트아이템/백그라운드-z8.png') center center / cover no-repeat ;
     width: 45.2rem;
     height: 45.2rem;
     display: inline-block;
   }
 
   .bestzip.mobile .bestzip_wrap .zip_item:nth-child(2){
-    background:url('../img/베스트아이템/백그라운드-zfc.png') center center / 100% no-repeat ;
+    background:url('../img/베스트아이템/백그라운드-zfc.png') center center / cover no-repeat ;
     width: 45.2rem;
     height: 45.2rem;
     display: inline-block;
   }
 
   .bestzip.mobile .bestzip_wrap .zip_item:nth-child(3){
-    background:url('../img/베스트아이템/백그라운드-클라우드.png') center center / 100% no-repeat ;
+    background:url('../img/베스트아이템/백그라운드-클라우드.png') center center / cover no-repeat ;
     width: 45.2rem;
     height: 45.2rem;
     display: inline-block;
   }
+
+  .bestzip.mobile .bestzip_wrap .zip_item:last-child{
+    background:url('../img/베스트아이템/태블릿용more.svg') center center / cover no-repeat ;
+    width: 45.2rem;
+    height: 45.2rem;
+    display: inline-block;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+
 
   .bestzip.mobile .bestzip_wrap .zip_item .zip_text{
     width: 100%;
@@ -1777,6 +1786,14 @@ a{
     
   }
 
+  .footer .inner .footer_top .footer_menu_list > li .changed::after{
+    content: '';
+      background: url(../img/footer/CaretUp.svg)center center / cover no-repeat;
+      width: 3.2rem;
+      height: 3.2rem;
+      display: inline-block;
+  }
+
   .footer .inner .footer_top .footer_menu_list > li > ul  {
     display: none;
   }
@@ -1877,7 +1894,7 @@ a{
 
   .event .inner .event_list > li .event_name{
     margin-top: 0;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
 
   .event .inner .event_list > li .event_name::after{
@@ -1916,8 +1933,16 @@ a{
     margin-bottom: 1.6rem;  
   }  
   
-  .bestzip.mobile .bestzip_wrap .zip_item .zip_text{
+  /* .bestzip.mobile .bestzip_wrap .zip_item .zip_text{
     
+  } */
+
+  .new_camera .Z6 img{
+    margin-top: -10rem;
+  }
+
+  .new_camera .Z6_more .Z6_more_text{
+    margin-top: 1rem;
   }
 
 }
