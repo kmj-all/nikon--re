@@ -1933,9 +1933,6 @@ a{
     margin-bottom: 1.6rem;  
   }  
   
-  /* .bestzip.mobile .bestzip_wrap .zip_item .zip_text{
-    
-  } */
 
   .new_camera .Z6 img{
     margin-top: -10rem;
@@ -1945,6 +1942,69 @@ a{
     margin-top: 1rem;
   }
 
+  .new_camera .Z6_more .Z6_more_text{
+    font-size: 1.7rem;
+  }
+
+  .lut_inner .lut_text .lut_title3{
+    letter-spacing: 0.6rem;
+  }
+
+  /* 모바일 검색창 */
+
+  .header .inner .header_pc .utill_mobile .search_m .search_wrap_m input{
+    width: 35rem;
+    letter-spacing: 0.7rem;
+    font-size: 1.7rem;
+  }
+
+}
+
+
+/* 모바일 세부조정 */
+@media screen and (max-width:450px){
+
+  .lut {
+    padding-bottom: 12rem;
+  }
+
+
+  /* 카메라 마진 탑 조절 */
+  .new_camera .Z6 img{
+    margin-top: -8rem;
+  }
+
+  .new_camera .Z6_more .Z6_more_text{
+    margin-top: -7rem;
+  }
+
+  .title{
+   margin-bottom: 4rem;
+  }
+
+  .event .inner .event_top .event_top_item .event_top_text .event_sub{
+    font-size: 1.6rem;
+    white-space: nowrap;
+  }
+
+  .event .inner .event_top .event_top_item .event_top_text a{
+    width: 20%;
+    height: auto;
+  }
+
+  .event .inner .event_top .event_top_item .event_top_text a img{
+    width: 20%;
+    height: auto;
+  }
+
+  .event .inner .event_top{
+    row-gap: 4rem;
+  }
+
+  .event .inner .event_list{
+    margin-top: 4rem;
+    margin-bottom: 6.5rem;
+  }
 }
 
 
